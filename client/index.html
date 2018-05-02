@@ -1,0 +1,93 @@
+<!-- 
+* Copyright 2016 Carlos Eduardo Alfaro Orellana
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>IBM WATSON</title>
+	
+     <!-- Normalize CSS -->
+	<link rel="stylesheet" href="css/normalize.css">
+    
+     <!-- Materialize CSS -->
+	<link rel="stylesheet" href="css/materialize.min.css">
+    
+     <!-- Material Design Iconic Font CSS -->
+	<link rel="stylesheet" href="css/material-design-iconic-font.min.css">
+    
+    <!-- Malihu jQuery custom content scroller CSS -->
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+    
+    <!-- Sweet Alert CSS -->
+    <link rel="stylesheet" href="css/sweetalert.css">
+    
+    <!-- MaterialDark CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+</head>
+<body class="font-cover">
+    <div class="container">
+        <div class="row">
+                <h1>Discovery Watson</h1>
+        </div>
+    
+        <div class="row">
+                <form enctype="multipart/form-data" id="form">
+                    <div class="container">
+                <div class="row">
+                                <div class="file-field input-field col s6">
+                                        <div class="btn">
+                                            <span>File</span>
+                                            <input name="document" type="file" class="validate" id="document" required>
+                                        </div>
+                                        <div class="file-path-wrapper">
+                                                <input class="file-path validate" type="text">
+                                              </div>
+                                    </div>
+                </div>
+                <div class="row">
+                        <button class="waves-effect waves-light btn-large"><i class="zmdi zmdi-cloud left"></i>Subir Documento</button>
+                </div>
+            </div>
+            </form>
+        </div>
+            <div class="row">
+                    <div class="input-field col s6">
+                            <input id="texto" type="text" class="validate">
+                            <label for="texto">Consulta</label>
+                    </div>
+                    <div class="col s4">
+                        <button class="waves-effect waves-light btn" id="consultar">Consultar</button>
+                    </div>
+        </div>
+        
+        <div class="row">
+            <div class="container col s6" id="campo">
+            </div>
+            <div class="container col s6" id="json">
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- Sweet Alert JS -->
+    <script src="js/sweetalert.min.js"></script>
+    
+    <!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-2.2.0.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+    <!-- Materialize JS -->
+	<script src="js/materialize.min.js"></script>
+    
+    <!-- Malihu jQuery custom content scroller JS -->
+	<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    
+    <!-- MaterialDark JS -->
+	<script src="js/mainWatson.js"></script>
+</body>
+</html>
