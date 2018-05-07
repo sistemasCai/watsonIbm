@@ -28,7 +28,14 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
 </head>
-<body class="font-cover">
+<body>
+        <nav>
+                <div class="nav-wrapper">
+                    <div class="container">
+                            <a href="#" class="brand-logo">Discovery Watson</a>
+                    </div>
+                </div>
+              </nav>
     <div class="container">
         <div class="row">
                 <h1>Discovery Watson</h1>
@@ -71,14 +78,87 @@
             </div>
         </div>
         
+        <div class="row">
+            <div class="container">
+                <h3>Consulta de Enfermedades</h3>
+                <div class="col s6">
+                        <select id="enfermedad">
+                                <option value="diabetes">Diabetes</option>
+                                <option value="cáncer">Cancer</option>
+                                <option value="hipertensión">Hipertension</option>
+                        </select>
+                </div>
+                <div class="col s6">
+                        <button id="addEnfermedad" class="waves-effect waves-light btn"><i class="zmdi zmdi-cloud left"></i>Add</button>
+                        <button id="consultarLista" class="waves-effect waves-light btn"><i class="zmdi zmdi-cloud left"></i>Consultar</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container">
+                    <ul id="enfermedades" class="collection">                        
+                    </ul>
+            </div>
+                
+        </div>
+
+        <div id="estadistica" class="row">
+        </div>
     </div>
-    
+    <div class="row">
+        <div class="container">
+            <h4>Consulta Enfermedad por Genero</h4>
+            <div class="col s4">
+                <select id="enfermedades2">
+                        <option value="diabetes">Diabetes</option>
+                        <option value="cáncer">Cancer</option>
+                        <option value="hipertensión">Hipertension</option>
+                </select>
+            </div>
+            <div class="col s4">
+                <select id="genero">
+                    <option value="masculino">masculino</option>
+                    <option value="femenino">femenino</option>
+                </select>
+            </div>
+            <div class="col s4">
+                    <button id="consultar2" class="waves-effect waves-light btn"><i class="zmdi zmdi-cloud left"></i>Consultar</button>
+            </div>
+        </div>
+    </div>
     <!-- Sweet Alert JS -->
+    <footer class="page-footer">
+            <div class="container">
+              <div class="row">
+                <div class="col l6 s12">
+                  <h5 class="white-text">Discovery Watson</h5>
+                  <p class="grey-text text-lighten-4">Ing. de Software</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                  <h5 class="white-text">Integrantes</h5>
+                  <ul>
+                    <li><a class="grey-text text-lighten-3" href="#!">Colque Guzman Jorge Luis</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Sandoval Garcia David Jhonatan</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Arce Fuertes Jose Antonio</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Puma Lima Pablo Josue</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Acosta Choclo Mingyar</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="footer-copyright">
+              <div class="container">
+              © 2014 Copyright Text
+              <a class="grey-text text-lighten-4 right" href="#!">Ing. Software</a>
+              </div>
+            </div>
+          </footer>
+              
     <script src="js/sweetalert.min.js"></script>
     
     <!-- jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="js/jquery-2.2.0.min.js"><\/script>')</script>
+	<script>window.jQuery || document.write('<script     src="js/jquery-2.2.0.min.js"><\/script>')</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
     <!-- Materialize JS -->
@@ -87,7 +167,7 @@
     <!-- Malihu jQuery custom content scroller JS -->
 	<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
     
-    <!-- MaterialDark JS -->
-	<script src="js/mainWatson.js"></script>
+    <script src="js/mainWatson.js"></script>
+    
 </body>
 </html>
