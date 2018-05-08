@@ -80,6 +80,11 @@ app.post('/addDocument',upload.single('document'),function(req, res){
         }); 
 });
 
+
+app.get('/getCollections',function(req,res){
+	
+});
+
 app.get('/data/:consulta', function(req, res){
     var texto = 'diabetes';
     console.log(req.params.consulta);
@@ -131,11 +136,21 @@ app.post('/estadistica', function(req, res){
 			passages_count: 99
 		},
 		function(error, data) {
-			var data1 = {
-				result : porEnfermedades(data.passages, listaEnfermedades)
-			};
-			listaEnfermedades = [];
-			res.status(200).send(data1);	
+
+			discovery.getCollection({ 
+				environment_id: '68d2315f-0103-4ac8-98df-4760d7e1b950',
+				collection_id: '921cf125-cc14-4dbb-a363-6bb2675b1519',
+			 },
+			function(error, resCollections) {
+				
+				var data1 = {
+					result : porEnfermedades(data.passages, listaEnfermedades),
+					available : resCollections.document_counts.available
+				};
+				listaEnfermedades = [];
+				res.status(200).send(data1); 
+			  });
+				
 		}
 	);
 	

@@ -114,7 +114,7 @@ $('#consultarLista').click(function(){
             for (let index = 0; index < res.length; index++) {
                 const element = res[index];
                 ParserDatos.push({
-                    x : element.enfermedad, y : element.cantidad
+                    x : element.enfermedad, y : (element.cantidad/43)*100
                 });
             }
             console.log(ParserDatos);
